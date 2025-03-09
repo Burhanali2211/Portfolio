@@ -1,0 +1,161 @@
+/* styles.css */
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Variables */
+:root {
+    --primary-color: #5926EF;
+    --glass-blur: 10px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --nav-bg-light: rgba(255, 255, 255, 0.9);
+    --nav-bg-dark: rgba(13, 13, 13, 0.9);
+    --text-color: #333;
+}
+
+[data-theme="dark"] {
+    --text-color: #f9f9f9;
+    --nav-bg-light: var(--nav-bg-dark);
+}
+
+/* Base Styles */
+body {
+    @apply font-sans bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500;
+}
+
+/* Navbar Styles */
+.navbar {
+    @apply bg-[var(--nav-bg-light)] backdrop-blur-[var(--glass-blur)] shadow-[var(--shadow)];
+}
+
+.navbar.scrolled {
+    @apply py-2 bg-[var(--nav-bg-light)] shadow-lg;
+}
+
+.nav-logo {
+    @apply hover:scale-105 text-[var(--primary-color)] drop-shadow-md;
+}
+
+.nav-menu {
+    @apply relative;
+}
+
+.nav-link {
+    @apply text-[var(--text-color)] font-medium px-3 py-2 rounded-md transition-all duration-300 ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    @apply text-[var(--primary-color)] -translate-y-1 outline-none;
+}
+
+.nav-link.active {
+    @apply text-[var(--primary-color)] font-semibold;
+}
+
+.nav-indicator {
+    @apply transform translate-x-3;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    @apply scale-110 outline-none;
+}
+
+.hamburger.active span:nth-child(1) {
+    @apply rotate-45 translate-y-2;
+}
+
+.hamburger.active span:nth-child(2) {
+    @apply opacity-0;
+}
+
+.hamburger.active span:nth-child(3) {
+    @apply -rotate-45 -translate-y-2;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    @apply fixed w-5 h-5 bg-[rgba(89, 38, 239, 0.3)] rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-out;
+}
+
+.nav-link:hover~.custom-cursor,
+.nav-logo:hover~.custom-cursor {
+    @apply w-10 h-10 bg-[rgba(89, 38, 239, 0.6)];
+}
+
+/* Mobile Menu */
+@media (max-width: 1024px) {
+    .nav-menu {
+        @apply fixed top-0 left-full w-full h-screen flex-col justify-center items-center bg-[var(--nav-bg-light)] backdrop-blur-[var(--glass-blur)] shadow-[var(--shadow)] transition-all duration-500 ease-in-out;
+    }
+
+    .nav-menu.active {
+        @apply left-0;
+    }
+
+    .nav-item {
+        @apply my-4;
+    }
+
+    .nav-link {
+        @apply text-lg;
+    }
+
+    .nav-indicator {
+        @apply hidden;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .navbar {
+        @apply px-6 py-3;
+    }
+
+    .navbar.scrolled {
+        @apply py-2;
+    }
+
+    .nav-logo {
+        @apply text-xl;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        @apply px-4 py-2;
+    }
+
+    .nav-link {
+        @apply text-base;
+    }
+
+    .nav-menu.active {
+        @apply bg-[var(--nav-bg-light)] backdrop-blur-[var(--glass-blur)];
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        @apply px-3 py-2;
+    }
+
+    .nav-logo {
+        @apply text-lg;
+    }
+
+    .nav-link {
+        @apply text-sm;
+    }
+
+    .theme-toggle {
+        @apply text-lg;
+    }
+
+    .hamburger span {
+        @apply w-6;
+    }
+}
