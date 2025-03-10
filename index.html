@@ -7,22 +7,24 @@
     <title>Portfolio - Burhan Ali</title>
 
     <!-- Critical styles -->
-    <!-- this is the main css for the smooth scrolling -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="media-queries.css">
     <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="animations.css">
 
     <!-- Deferred scripts -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
 </head>
+
 <body>
-    <!-- Main scroll container with proper structure for Locomotive Scroll -->
-    <div class="scroll-wrapper" data-scroll-container>
+    <div data-scroll-container>
+
+
         <!-- Full-Page Background -->
         <div class="page-background">
             <div class="page-particles"></div>
@@ -44,20 +46,20 @@
         <!-- Navbar -->
         <header>
             <nav class="navbar" role="navigation" aria-label="Main Navigation">
-                <div class="nav-logo">Burhan Ali.</div>
+                <div class="nav-logo slide-right">Burhan Ali.</div>
                 <ul class="nav-menu">
-                    <li class="nav-item" style="--item-index: 0"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item" style="--item-index: 1"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item" style="--item-index: 2"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item" style="--item-index: 3"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item" style="--item-index: 4"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item" style="--item-index: 5"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
                     <button class="theme-toggle" aria-label="Toggle Dark Mode">
-                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-moon fancy-entrance"></i>
                     </button>
-                    <div class="hamburger" tabindex="0" aria-label="Menu" role="button" aria-expanded="false">
+                    <div class="hamburger" tabindex="0" aria-label="Menu" role="button">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -67,527 +69,824 @@
             </nav>
         </header>
 
-        <!-- Main Content of this page is ther and i want you to read this all-->
-        <main>
-            <!-- Hero Section -->
-            <section id="home">
-                <div class="hero-container">
-                    <div class="hero-content">
-                        <div class="hero-text">
-                            <h1 class="hero-title">
-                                <span class="title-line">Greetings, I'm</span>
-                                <span class="title-line highlight" data-text="Burhan Ali">Burhan Ali</span>
-                            </h1>
-                            <p class="hero-subtitle">
-                                <span class="subtitle-text">Visionary Creator</span>
-                                <span class="subtitle-text"> | </span>
-                                <span class="subtitle-text">Master of Code, AI & Design</span>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-line">Greetings, I’m</span>
+                            <span class="title-line highlight" data-text="Burhan Ali">Burhan Ali</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            <span class="subtitle-text">Visionary Creator</span>
+                            <span class="subtitle-text"> | </span>
+                            <span class="subtitle-text">Master of Code, AI & Design</span>
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="primary-button" aria-label="Explore My Work">
+                                <span class="button-text">Download CV</span>
+                                <svg class="button-icon" width="20" height="20">
+                                    <path d="M5 10h10m-5-5l5 5-5 5" fill="none" stroke="#fff" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <button class="secondary-button" aria-label="Contact Me">
+                                <span class="button-text">Initiate Contact</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image-container scale-up slide-left">
+                        <div class="image-wrapper">
+                            <img src="profile.jpg" alt="Burhan Ali Profile Image" class="hero-profile" loading="lazy"
+                                onerror="this.src='fallback-profile.jpg';">
+                            <div class="image-glow"></div>
+                            <div class="image-hologram"></div>
+                        </div>
+                        <div class="image-orbit">
+                            <span class="orbit-particle particle-1"></span>
+                            <span class="orbit-particle particle-2"></span>
+                            <span class="orbit-particle particle-3"></span>
+                            <span class="orbit-particle particle-4"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-particles"></div>
+                <div class="hero-floaters">
+                    <span class="floater floater-1" data-shape="cube"></span>
+                    <span class="floater floater-2" data-shape="sphere"></span>
+                    <span class="floater floater-3" data-shape="prism"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-header">
+                        <h2 class="about-title">
+                            <span class="title-part slide-down">About</span>
+                            <span class="title-part highlight slide-up" data-text="Me">Me</span>
+                        </h2>
+                        <div class="about-subtitle">
+                            <span class="subtitle-text">A Journey Through Innovation & Excellence</span>
+                        </div>
+                    </div>
+                    <div class="about-main slide-right">
+                        <div class="about-text-container">
+                            <div class="text-card">
+                                <p class="about-bio">
+                                    I’m Burhan Ali, a relentless innovator at the intersection of code, design, and
+                                    artificial intelligence. With a passion for turning complex challenges into elegant
+                                    solutions, I’ve spent years mastering Python, embedded systems, and AI-driven
+                                    technologies.
+                                </p>
+                                <p class="about-bio">
+                                    My mission is to craft experiences that inspire, leveraging open-source
+                                    collaboration
+                                    and cutting-edge tools to push the boundaries of what’s possible. Every project is a
+                                    canvas—a chance to blend creativity with precision.
+                                </p>
+                            </div>
+                            <div class="text-orbit">
+                                <span class="orbit-dot dot-1"></span>
+                                <span class="orbit-dot dot-2"></span>
+                                <span class="orbit-dot dot-3"></span>
+                            </div>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Years of Experience</h3>
+                                    <p>5+ years of expertise in Python, AI, and IoT, continuously evolving with emerging technologies.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="timeline-item">
+                                <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Projects Completed</h3>
+                                    <p>Over 50+ successful projects in Web Development, AI, and Embedded Systems.</p>
+                                </div>
+                            </div>
+                        
+                            <div class="timeline-item">
+                                <div class="timeline-icon"><i class="fas fa-handshake"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Happy Clients</h3>
+                                    <p>Delivering quality solutions to 10+ businesses, ensuring satisfaction and long-term collaboration.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="about-floaters">
+                    <span class="floater floater-1" data-shape="tetrahedron"></span>
+                    <span class="floater floater-2" data-shape="cube"></span>
+                    <span class="floater floater-3" data-shape="sphere"></span>
+                </div>
+            </div>
+        </section>
+        
+                <section id="projects" class="projects-section">
+                    <div class="projects-container">
+                        <!-- Header -->
+                        <div class="projects-header">
+                            <h2 class="projects-title">Projects Nexus</h2>
+                            <p class="projects-subtitle">Where Innovation Ignites</p>
+                        </div>
+        
+                        <!-- Projects Grid -->
+                        <div class="projects-grid">
+                            <!-- Project Card 1 -->
+                            <div class="project-card" tabindex="0">
+                                <div class="project-inner">
+                                    <div class="project-front">
+                                        <img src="projects/project.png" alt="Project 1" class="project-image" />
+                                        <h3 class="project-name">Quantum Dashboard</h3>
+                                        <p class="project-tagline">Real-time analytics redefined.</p>
+                                    </div>
+                                    <div class="project-back">
+                                        <p class="project-desc">A cutting-edge dashboard built with React and Node.js,
+                                            delivering
+                                            real-time data visualization with a sleek, responsive design.</p>
+                                        <a href="#" class="project-link">Explore →</a>
+                                    </div>
+                                    <div class="project-glow"></div>
+                                </div>
+                            </div>
+        
+                            <!-- Project Card 2 -->
+                            <div class="project-card" tabindex="0">
+                                <div class="project-inner">
+                                    <div class="project-front">
+                                        <img src="projects/project1.png" alt="Project 2" class="project-image" />
+                                        <h3 class="project-name">AI Chatbot</h3>
+                                        <p class="project-tagline">Conversations powered by intelligence.</p>
+                                    </div>
+                                    <div class="project-back">
+                                        <p class="project-desc">An AI-driven chatbot using TensorFlow, integrated with a custom
+                                            API for
+                                            seamless user interaction and learning capabilities.</p>
+                                        <a href="#" class="project-link">Explore →</a>
+                                    </div>
+                                    <div class="project-glow"></div>
+                                </div>
+                            </div>
+        
+                            <!-- Project Card 3 -->
+                            <div class="project-card" tabindex="0">
+                                <div class="project-inner">
+                                    <div class="project-front">
+                                        <img src="projects/project3.png" alt="Project 3" class="project-image" />
+                                        <h3 class="project-name">E-Commerce Hub</h3>
+                                        <p class="project-tagline">Shopping, elevated.</p>
+                                    </div>
+                                    <div class="project-back">
+                                        <p class="project-desc">A full-stack e-commerce platform with Node.js backend, React
+                                            frontend,
+                                            and optimized checkout flows.</p>
+                                        <a href="#" class="project-link">Explore →</a>
+                                    </div>
+                                    <div class="project-glow"></div>
+                                </div>
+                            </div>
+        
+                            <!-- Project Card 4 -->
+                            <div class="project-card" tabindex="0">
+                                <div class="project-inner">
+                                    <div class="project-front">
+                                        <img src="projects/project4.png" alt="Project 4" class="project-image" />
+                                        <h3 class="project-name">Git Workflow</h3>
+                                        <p class="project-tagline">Collaboration streamlined.</p>
+                                    </div>
+                                    <div class="project-back">
+                                        <p class="project-desc">A custom Git-based workflow tool for teams, enhancing version
+                                            control
+                                            and project tracking.</p>
+                                        <a href="#" class="project-link">Explore →</a>
+                                    </div>
+                                    <div class="project-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- Services Section -->
+        <!-- My Services Section -->
+        <section id="services" class="services-section">
+            <div class="services-container">
+                <!-- Section Header with Badge -->
+                <div class="section-header">
+                    <div class="elite-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Elite Freelancer</span>
+                    </div>
+                    <h2 class="section-title">MY SERVICES</h2>
+                    <p class="section-subtitle">Transforming ideas into digital excellence</p>
+                </div>
+
+                <!-- Stats Counter with Animated Bars -->
+                <div class="stats-wrapper">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number-wrapper">
+                                    <span class="stat-number" data-count="120">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
+                    
+                                <div class="stat-label">Projects Delivered</div>
+                                <div class="stat-progress">
+                                    <div class="stat-bar" data-percentage="85"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number-wrapper">
+                                    <span class="stat-number" data-count="85">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
+                                <div class="stat-label">Happy Clients</div>
+                                <div class="stat-progress">
+                                    <div class="stat-bar" data-percentage="75"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number-wrapper">
+                                    <span class="stat-number" data-count="5">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
+                                <div class="stat-label">Years Experience</div>
+                                <div class="stat-progress">
+                                    <div class="stat-bar" data-percentage="50"></div>
+                                </div>
+                            </div>
+                    </div>
+
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number-wrapper">
+                                    <span class="stat-number" data-count="99">0</span>
+                                    <span class="stat-percentage">%</span>
+                                </div>
+                                <div class="stat-label">Satisfaction Rate</div>
+                                <div class="stat-progress">
+                                    <div class="stat-bar" data-percentage="99"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Status Pie Chart Section -->
+                    <div class="status-pie">
+                        <canvas id="statsPieChart"></canvas>
+                    </div>
+                    
+                    <!-- Chart.js Library -->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            var ctx = document.getElementById("statsPieChart").getContext("2d");
+
+                            // Detect theme mode
+                            var rootStyles = getComputedStyle(document.documentElement);
+                            var primaryColor = rootStyles.getPropertyValue("--primary-color").trim();
+                            var secondaryColor = rootStyles.getPropertyValue("--secondary-color").trim();
+                            var accentColor = rootStyles.getPropertyValue("--accent-color").trim();
+                            var waveColor = rootStyles.getPropertyValue("--wave-fill-light").trim();
+
+                            // Data for the pie chart
+                            var statsData = {
+                                labels: ["Projects Delivered", "Happy Clients", "Years of Experience", "Satisfaction Rate"],
+                                datasets: [{
+                                    data: [120, 85, 5, 99], // Stats data
+                                    backgroundColor: [primaryColor, secondaryColor, accentColor, waveColor], // Theme colors
+                                    hoverBackgroundColor: [primaryColor, secondaryColor, accentColor, waveColor]
+                                }]
+                            };
+
+                            // Create the pie chart
+                            var statsPieChart = new Chart(ctx, {
+                                type: "pie",
+                                data: statsData,
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        legend: {
+                                            position: "bottom",
+                                            labels: {
+                                                color: rootStyles.getPropertyValue("--text-color").trim(),
+                                                font: {
+                                                    size: 14
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+                    
+                    <!-- CSS for Centering & Styling -->
+                    <style>
+                        .status-pie {
+                            width: 420px;
+                            height: 420px;
+                            margin: auto;
+                            display: flex;
+                            color: var(--text-color);
+                            justify-content: center;
+                            align-items: center;
+                            background: var(--glass-bg);
+                            backdrop-filter: blur(var(--glass-blur));
+                            box-shadow: var(--shadow);
+                            border-radius: 20px;
+                            padding: 20px;
+                        }
+                    
+                        canvas {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    </style>
+
+                </div>
+
+                <!-- Advanced Services Grid with 3D Cards -->
+                <div class="services-grid" id="skills">
+                    <!-- Service Card 1 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="card-title">Web Development</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    Custom websites built with the latest technologies, optimized for performance and
+                                    SEO.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                                    <li><i class="fas fa-check"></i> SEO Optimization</li>
+                                    <li><i class="fas fa-check"></i> Fast Loading Speed</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h3 class="card-title">UI/UX Design</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    User-centered design with intuitive interfaces that enhance user experience and
+                                    engagement.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> User Research</li>
+                                    <li><i class="fas fa-check"></i> Wireframing</li>
+                                    <li><i class="fas fa-check"></i> Usability Testing</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3 class="card-title">Mobile Apps</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    Cross-platform mobile applications that deliver seamless experiences across all
+                                    devices.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> iOS & Android</li>
+                                    <li><i class="fas fa-check"></i> React Native</li>
+                                    <li><i class="fas fa-check"></i> Flutter Development</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="card-title">Digital Marketing</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    Data-driven strategies to increase your online presence and drive qualified traffic.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> SEO & SEM</li>
+                                    <li><i class="fas fa-check"></i> Social Media</li>
+                                    <li><i class="fas fa-check"></i> Analytics & Reports</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3 class="card-title">API Development</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    Secure, scalable, and well-documented APIs for seamless integration with your
+                                    systems.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> RESTful APIs</li>
+                                    <li><i class="fas fa-check"></i> GraphQL</li>
+                                    <li><i class="fas fa-check"></i> Microservices</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="service-card" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                        data-tilt-perspective="1000">
+                        <div class="service-card-inner">
+                            <div class="card-front">
+                                <div class="card-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3 class="card-title">Cloud Solutions</h3>
+                                <div class="card-shape"></div>
+                            </div>
+                            <div class="card-back">
+                                <p class="card-description">
+                                    Scalable cloud infrastructure setup and optimization for maximum performance.
+                                </p>
+                                <ul class="card-features">
+                                    <li><i class="fas fa-check"></i> AWS & Azure</li>
+                                    <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
+                                    <li><i class="fas fa-check"></i> DevOps Solutions</li>
+                                </ul>
+                                <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive CTA Button -->
+                <div class="cta-container">
+                    <div class="cta-wrapper">
+                        <a href="#contact" class="cta-button">
+                            <span class="cta-text">Hire Me Now</span>
+                            <div class="cta-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <div class="cta-ripple"></div>
+                        </a>
+                    </div>
+                </div>
+                </section>
+    <!-- Advanced Testimonial Slider with 3D Cards -->
+    <section class="testimonials-section">
+        <div class="testimonials-wrapper">
+            <h3 class="testimonials-title">What Clients Say</h3>
+            <div class="testimonials-container">
+                <div class="testimonials-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Working with this developer was a game-changer for our business. The website they built
+                                exceeded our expectations and has significantly increased our conversion rates."
                             </p>
-                            <div class="hero-buttons">
-                                <button class="primary-button" aria-label="Explore My Work">
-                                    <span class="button-text">Discover My Universe</span>
-                                    <svg class="button-icon" width="20" height="20" aria-hidden="true">
-                                        <path d="M5 10h10m-5-5l5 5-5 5" fill="none" stroke="#fff" stroke-width="2" />
-                                    </svg>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/client1.png" alt="Client Avatar">
+                                </div>
+                                <div class="author-details">
+                                    <h4 class="author-name">Sarah Johnson</h4>
+                                    <p class="author-company">Marketing Director, TechCorp</p>
+                                </div>
+                            </div>
+                            <div class="contact-buttons">
+                                <button class="contact-btn email-btn" aria-label="Email client">
+                                    <i class="fas fa-envelope"></i> Email
                                 </button>
-                                <button class="secondary-button" aria-label="Contact Me">
-                                    <span class="button-text">Initiate Contact</span>
+                                <button class="contact-btn call-btn" aria-label="Call client">
+                                    <i class="fas fa-phone"></i> Call
                                 </button>
                             </div>
                         </div>
-                        <div class="hero-image-container">
-                            <div class="image-wrapper">
-                                <img src="profile.jpg" alt="Burhan Ali Profile Image" class="hero-profile" loading="lazy"
-                                    decoding="async" onerror="this.src='fallback-profile.jpg';">
-                                <div class="image-glow"></div>
-                                <div class="image-hologram"></div>
+                    </div>
+    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            <div class="image-orbit">
-                                <span class="orbit-particle particle-1"></span>
-                                <span class="orbit-particle particle-2"></span>
-                                <span class="orbit-particle particle-3"></span>
-                                <span class="orbit-particle particle-4"></span>
+                            <div class="testimonial-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Extremely professional and talented. Delivered our mobile app on time and under budget. I
+                                highly recommend their services for any business looking to level up their digital
+                                presence."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/client2.png" alt="Client Avatar">
+                                </div>
+                                <div class="author-details">
+                                    <h4 class="author-name">Michael Chen</h4>
+                                    <p class="author-company">CEO, Startapp</p>
+                                </div>
+                            </div>
+                            <div class="contact-buttons">
+                                <button class="contact-btn email-btn" aria-label="Email client">
+                                    <i class="fas fa-envelope"></i> Email
+                                </button>
+                                <button class="contact-btn call-btn" aria-label="Call client">
+                                    <i class="fas fa-phone"></i> Call
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="hero-particles"></div>
-                    <div class="hero-floaters">
-                        <span class="floater floater-1" data-shape="cube"></span>
-                        <span class="floater floater-2" data-shape="sphere"></span>
-                        <span class="floater floater-3" data-shape="prism"></span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about">
-                <div class="about-container">
-                    <div class="about-content">
-                        <div class="about-header">
-                            <h2 class="about-title">
-                                <span class="title-part">About</span>
-                                <span class="title-part highlight" data-text="Me">Me</span>
-                            </h2>
-                            <div class="about-subtitle">
-                                <span class="subtitle-text">A Journey Through Innovation & Excellence</span>
+    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                        <div class="about-main">
-                            <div class="about-text-container">
-                                <div class="text-card">
-                                    <p class="about-bio">
-                                        I'm Burhan Ali, a relentless innovator at the intersection of code, design, and
-                                        artificial intelligence. With a passion for turning complex challenges into elegant
-                                        solutions, I've spent years mastering Python, embedded systems, and AI-driven
-                                        technologies.
-                                    </p>
-                                    <p class="about-bio">
-                                        My mission is to craft experiences that inspire, leveraging open-source collaboration
-                                        and cutting-edge tools to push the boundaries of what's possible. Every project is a
-                                        canvas—a chance to blend creativity with precision.
-                                    </p>
+                            <div class="testimonial-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Extremely professional and talented. Delivered our mobile app on time and under budget. I
+                                highly recommend their services for any business looking to level up their digital
+                                presence."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/client2.png" alt="Client Avatar">
                                 </div>
-                                <div class="text-orbit">
-                                    <span class="orbit-dot dot-1"></span>
-                                    <span class="orbit-dot dot-2"></span>
-                                    <span class="orbit-dot dot-3"></span>
+                                <div class="author-details">
+                                    <h4 class="author-name">Michael Chen</h4>
+                                    <p class="author-company">CEO, Startapp</p>
                                 </div>
                             </div>
-                            <div class="about-stats-container">
-                                <div class="stats-wrapper">
-                                    <div class="stat-card" data-stat="experience" data-info="Python, AI, IoT">
-                                        <div class="stat-number">5+</div>
-                                        <div class="stat-label">Years of Experience</div>
-                                        <div class="stat-reflection"></div>
-                                    </div>
-                                    <div class="stat-card" data-stat="projects" data-info="Web Apps, IoT Systems">
-                                        <div class="stat-number">50+</div>
-                                        <div class="stat-label">Projects Completed</div>
-                                        <div class="stat-reflection"></div>
-                                    </div>
-                                    <div class="stat-card" data-stat="clients" data-info="Tech Startups, Enterprises">
-                                        <div class="stat-number">10+</div>
-                                        <div class="stat-label">Happy Clients</div>
-                                        <div class="stat-reflection"></div>
-                                    </div>
-                                </div>
-                                <div class="stats-hologram"></div>
+                            <div class="contact-buttons">
+                                <button class="contact-btn email-btn" aria-label="Email client">
+                                    <i class="fas fa-envelope"></i> Email
+                                </button>
+                                <button class="contact-btn call-btn" aria-label="Call client">
+                                    <i class="fas fa-phone"></i> Call
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="about-floaters">
-                        <span class="floater floater-1" data-shape="tetrahedron"></span>
-                        <span class="floater floater-2" data-shape="cube"></span>
-                        <span class="floater floater-3" data-shape="sphere"></span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Services Section -->
-            <section id="services">
-                <div class="services-container">
-                    <div class="services-header">
-                        <h2 class="services-title">
-                            <span class="title-part">My</span>
-                            <span class="title-part highlight" data-text="Services">Services</span>
-                        </h2>
-                        <p class="services-subtitle">Unleashing Possibilities with Cutting-Edge Solutions</p>
-                    </div>
-                    <div class="services-grid">
-                        <div class="service-pod" data-service="python">
-                            <div class="pod-core">
-                                <i class="fas fa-code pod-icon"></i>
-                                <h3 class="pod-title">Python Development</h3>
-                                <div class="pod-core-glow"></div>
+                    <!-- Testimonial 4-->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            <div class="pod-overlay">
-                                <p class="pod-desc">Crafting scalable, efficient, and powerful applications using Python's
-                                    versatile ecosystem.</p>
-                                <div class="pod-holo-ring"></div>
-                                <div class="pod-energy-flow"></div>
+                            <div class="testimonial-icon">
+                                <i class="fas fa-quote-left"></i>
                             </div>
-                            <div class="pod-orbitals">
-                                <span class="orbital-ring ring-1"></span>
-                                <span class="orbital-ring ring-2"></span>
-                                <span class="orbital-particle particle-1"></span>
-                                <span class="orbital-particle particle-2"></span>
-                                <span class="orbital-particle particle-3"></span>
+                            <p class="testimonial-text">
+                                "Extremely professional and talented. Delivered our mobile app on time and under budget. I
+                                highly recommend their services for any business looking to level up their digital
+                                presence."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/client2.png" alt="Client Avatar">
+                                </div>
+                                <div class="author-details">
+                                    <h4 class="author-name">Michael Chen</h4>
+                                    <p class="author-company">CEO, Startapp</p>
+                                </div>
                             </div>
-                            <div class="pod-connectors">
-                                <span class="connector-line line-1"></span>
-                                <span class="connector-line line-2"></span>
-                            </div>
-                        </div>
-                        <div class="service-pod" data-service="embedded">
-                            <div class="pod-core">
-                                <i class="fas fa-microchip pod-icon"></i>
-                                <h3 class="pod-title">Embedded Systems</h3>
-                                <div class="pod-core-glow"></div>
-                            </div>
-                            <div class="pod-overlay">
-                                <p class="pod-desc">Building IoT and automation solutions that connect the physical and digital
-                                    worlds.</p>
-                                <div class="pod-holo-ring"></div>
-                                <div class="pod-energy-flow"></div>
-                            </div>
-                            <div class="pod-orbitals">
-                                <span class="orbital-ring ring-1"></span>
-                                <span class="orbital-ring ring-2"></span>
-                                <span class="orbital-particle particle-1"></span>
-                                <span class="orbital-particle particle-2"></span>
-                                <span class="orbital-particle particle-3"></span>
-                            </div>
-                            <div class="pod-connectors">
-                                <span class="connector-line line-1"></span>
-                                <span class="connector-line line-2"></span>
-                            </div>
-                        </div>
-                        <div class="service-pod" data-service="ai">
-                            <div class="pod-core">
-                                <i class="fas fa-robot pod-icon"></i>
-                                <h3 class="pod-title">AI Solutions</h3>
-                                <div class="pod-core-glow"></div>
-                            </div>
-                            <div class="pod-overlay">
-                                <p class="pod-desc">Harnessing machine learning and AI to create intelligent, future-ready
-                                    systems.</p>
-                                <div class="pod-holo-ring"></div>
-                                <div class="pod-energy-flow"></div>
-                            </div>
-                            <div class="pod-orbitals">
-                                <span class="orbital-ring ring-1"></span>
-                                <span class="orbital-ring ring-2"></span>
-                                <span class="orbital-particle particle-1"></span>
-                                <span class="orbital-particle particle-2"></span>
-                                <span class="orbital-particle particle-3"></span>
-                            </div>
-                            <div class="pod-connectors">
-                                <span class="connector-line line-1"></span>
-                                <span class="connector-line line-2"></span>
+                            <div class="contact-buttons">
+                                <button class="contact-btn email-btn" aria-label="Email client">
+                                    <i class="fas fa-envelope"></i> Email
+                                </button>
+                                <button class="contact-btn call-btn" aria-label="Call client">
+                                    <i class="fas fa-phone"></i> Call
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="services-background">
-                        <div class="services-circuit-pattern"></div>
-                        <div class="services-energy-field"></div>
-                    </div>
-                    <div class="services-floaters">
-                        <span class="service-floater" data-shape="hexagon"></span>
-                        <span class="service-floater" data-shape="octagon"></span>
-                        <span class="service-floater" data-shape="dodecahedron"></span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="skills-section">
-                <div class="skills-container">
-                    <!-- Header -->
-                    <div class="skills-header">
-                        <h2 class="skills-title">Skills</h2>
-                        <p class="skills-subtitle">Mastered Expertise</p>
-                    </div>
-
-                    <!-- Filter Controls -->
-                    <div class="skills-filter">
-                        <button class="filter-btn active" data-category="all" tabindex="0">All</button>
-                        <button class="filter-btn" data-category="frontend" tabindex="0">Frontend</button>
-                        <button class="filter-btn" data-category="backend" tabindex="0">Backend</button>
-                        <button class="filter-btn" data-category="ai" tabindex="0">AI</button>
-                        <button class="filter-btn" data-category="tools" tabindex="0">Tools</button>
-                    </div>
-
-                    <!-- Skills Grid -->
-                    <div class="skills-grid">
-                        <!-- Skill Card 1 -->
-                        <div class="skill-card" data-category="frontend" tabindex="0">
-                            <div class="skill-inner">
-                                <div class="skill-front">
-                                    <svg class="skill-icon" viewBox="0 0 24 24">
-                                        <path d="M12 2a10 10 0 0 0-7 17.7l1.4-1.4A8 8 0 1 1 12 4v2l4 4-4 4V12l2-2-2-2z"
-                                            fill="var(--primary-color)" />
-                                    </svg>
-                                    <h3 class="skill-name">React</h3>
-                                    <div class="skill-progress">
-                                        <svg class="progress-ring" width="80" height="80">
-                                            <circle class="progress-bg" cx="40" cy="40" r="35" />
-                                            <circle class="progress-fill" cx="40" cy="40" r="35" data-progress="85" />
-                                        </svg>
-                                        <span class="progress-text">85%</span>
-                                    </div>
+    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="testimonial-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Incredible attention to detail and user experience. Our e-commerce site has seen a 45%
+                                increase in sales since the redesign. Will definitely work with them again on future
+                                projects."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/client3.png" alt="Client Avatar">
                                 </div>
-                                <div class="skill-back">
-                                    <p class="skill-desc">Advanced proficiency in building dynamic, responsive UIs with React.</p>
+                                <div class="author-details">
+                                    <h4 class="author-name">Emma Rodriguez</h4>
+                                    <p class="author-company">Owner, StyleBoutique</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Skill Card 2 -->
-                        <div class="skill-card" data-category="backend" tabindex="0">
-                            <div class="skill-inner">
-                                <div class="skill-front">
-                                    <svg class="skill-icon" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10A10 10 0 0 0 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
-                                            fill="var(--primary-color)" />
-                                    </svg>
-                                    <h3 class="skill-name">Node.js</h3>
-                                    <div class="skill-progress">
-                                        <svg class="progress-ring" width="80" height="80">
-                                            <circle class="progress-bg" cx="40" cy="40" r="35" />
-                                            <circle class="progress-fill" cx="40" cy="40" r="35" data-progress="80" />
-                                        </svg>
-                                        <span class="progress-text">80%</span>
-                                    </div>
-                                </div>
-                                <div class="skill-back">
-                                    <p class="skill-desc">Expert in server-side development with Node.js and Express.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Skill Card 3 -->
-                        <div class="skill-card" data-category="ai" tabindex="0">
-                            <div class="skill-inner">
-                                <div class="skill-front">
-                                    <svg class="skill-icon" viewBox="0 0 24 24">
-                                        <path d="M12 2a10 10 0 0 0-7 17.7l1.4-1.4A8 8 0 1 1 12 4v2l4 4-4 4V12l2-2-2-2z"
-                                            fill="var(--primary-color)" />
-                                    </svg>
-                                    <h3 class="skill-name">TensorFlow</h3>
-                                    <div class="skill-progress">
-                                        <svg class="progress-ring" width="80" height="80">
-                                            <circle class="progress-bg" cx="40" cy="40" r="35" />
-                                            <circle class="progress-fill" cx="40" cy="40" r="35" data-progress="75" />
-                                        </svg>
-                                        <span class="progress-text">75%</span>
-                                    </div>
-                                </div>
-                                <div class="skill-back">
-                                    <p class="skill-desc">Skilled in machine learning model development with TensorFlow.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Skill Card 4 -->
-                        <div class="skill-card" data-category="tools" tabindex="0">
-                            <div class="skill-inner">
-                                <div class="skill-front">
-                                    <svg class="skill-icon" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10s10-4.5 10-10A10 10 0 0 0 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
-                                            fill="var(--primary-color)" />
-                                    </svg>
-                                    <h3 class="skill-name">Git</h3>
-                                    <div class="skill-progress">
-                                        <svg class="progress-ring" width="80" height="80">
-                                            <circle class="progress-bg" cx="40" cy="40" r="35" />
-                                            <circle class="progress-fill" cx="40" cy="40" r="35" data-progress="90" />
-                                        </svg>
-                                        <span class="progress-text">90%</span>
-                                    </div>
-                                </div>
-                                <div class="skill-back">
-                                    <p class="skill-desc">Proficient in version control and collaboration with Git.</p>
-                                </div>
+                            <div class="contact-buttons">
+                                <button class="contact-btn email-btn" aria-label="Email client">
+                                    <i class="fas fa-envelope"></i> Email
+                                </button>
+                                <button class="contact-btn call-btn" aria-label="Call client">
+                                    <i class="fas fa-phone"></i> Call
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="projects-section">
-                <div class="projects-container">
-                    <!-- Header -->
-                    <div class="projects-header">
-                        <h2 class="projects-title">Projects Nexus</h2>
-                        <p class="projects-subtitle">Where Innovation Ignites</p>
-                    </div>
-            
-                    <!-- Projects Grid -->
-                    <div class="projects-grid">
-                        <!-- Project Card 1 -->
-                        <div class="project-card" tabindex="0">
-                            <div class="project-inner">
-                                <div class="project-front">
-                                    <img src="projects/project.png" alt="Project 1" class="project-image" />
-                                    <h3 class="project-name">Quantum Dashboard</h3>
-                                    <p class="project-tagline">Real-time analytics redefined.</p>
-                                </div>
-                                <div class="project-back">
-                                    <p class="project-desc">A cutting-edge dashboard built with React and Node.js, delivering
-                                        real-time data visualization with a sleek, responsive design.</p>
-                                    <a href="#" class="project-link">Explore →</a>
-                                </div>
-                                <div class="project-glow"></div>
-                            </div>
-                        </div>
-            
-                        <!-- Project Card 2 -->
-                        <div class="project-card" tabindex="0">
-                            <div class="project-inner">
-                                <div class="project-front">
-                                    <img src="projects/project1.png" alt="Project 2" class="project-image" />
-                                    <h3 class="project-name">AI Chatbot</h3>
-                                    <p class="project-tagline">Conversations powered by intelligence.</p>
-                                </div>
-                                <div class="project-back">
-                                    <p class="project-desc">An AI-driven chatbot using TensorFlow, integrated with a custom API for
-                                        seamless user interaction and learning capabilities.</p>
-                                    <a href="#" class="project-link">Explore →</a>
-                                </div>
-                                <div class="project-glow"></div>
-                            </div>
-                        </div>
-            
-                        <!-- Project Card 3 -->
-                        <div class="project-card" tabindex="0">
-                            <div class="project-inner">
-                                <div class="project-front">
-                                    <img src="projects/project3.png" alt="Project 3" class="project-image" />
-                                    <h3 class="project-name">E-Commerce Hub</h3>
-                                    <p class="project-tagline">Shopping, elevated.</p>
-                                </div>
-                                <div class="project-back">
-                                    <p class="project-desc">A full-stack e-commerce platform with Node.js backend, React frontend,
-                                        and optimized checkout flows.</p>
-                                    <a href="#" class="project-link">Explore →</a>
-                                </div>
-                                <div class="project-glow"></div>
-                            </div>
-                        </div>
-            
-                        <!-- Project Card 4 -->
-                        <div class="project-card" tabindex="0">
-                            <div class="project-inner">
-                                <div class="project-front">
-                                    <img src="projects/project4.png" alt="Project 4" class="project-image" />
-                                    <h3 class="project-name">Git Workflow</h3>
-                                    <p class="project-tagline">Collaboration streamlined.</p>
-                                </div>
-                                <div class="project-back">
-                                    <p class="project-desc">A custom Git-based workflow tool for teams, enhancing version control
-                                        and project tracking.</p>
-                                    <a href="#" class="project-link">Explore →</a>
-                                </div>
-                                <div class="project-glow"></div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+    
+            <!-- Advanced Testimonial Navigation -->
+            <div class="testimonial-controls">
+                <button class="testimonial-control prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
                 </div>
-            </section>
+                <button class="testimonial-control next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Background Elements for Visual Interest -->
+        <div class="background-elements">
+            <div class="bg-circle circle-1"></div>
+            <div class="bg-circle circle-2"></div>
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+    </section>
+    
+    <!-- Include Font Awesome for icons -->
+    <!-- <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script> -->
 
-            <!-- Testimonial Section -->
-            <section id="testimonials" class="testimonials-section">
-                <div class="testimonials-container">
-                    <!-- Cosmic Background -->
-                    <div class="cosmic-bg" aria-hidden="true"></div>
-                    <!-- Header -->
-                    <div class="testimonials-header">
-                        <h2 class="testimonials-title">
-                            <span class="title-part">Client</span>
-                            <span class="title-part highlight" data-text="Testimonials">Testimonials</span>
-                        </h2>
-                        <p class="testimonials-subtitle">Echoes from the Cosmos</p>
-                    </div>
-
-                    <!-- Testimonial Orbit -->
-                    <div class="testimonial-orbit" id="testimonial-orbit">
-                        <div class="orbit-center">
-                            <div class="center-core"></div>
-                            <div class="center-glow"></div>
-                        </div>
-                        <!-- Testimonial Cards -->
-                        <div class="testimonial-card" data-id="1" data-angle="0">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <div class="card-core">
-                                        <div class="card-nucleus"></div>
-                                        <div class="card-energy"></div>
-                                        <img src="images/client2.png" alt="Client 1" class="card-avatar" />
-                                        <h3 class="card-name">Jane Doe</h3>
-                                        <p class="card-role">CEO, Stellar Solutions</p>
-                                    </div>
-                                    <div class="card-glow"></div>
-                                </div>
-                                <div class="card-back">
-                                    <p class="card-quote">"An exceptional developer who turned our vision into a cosmic reality.
-                                        Highly recommended!"</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card" data-id="2" data-angle="120">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <div class="card-core">
-                                        <div class="card-nucleus"></div>
-                                        <div class="card-energy"></div>
-                                        <img src="images/client1.png" alt="Client 2" class="card-avatar" />
-                                        <h3 class="card-name">John Smith</h3>
-                                        <p class="card-role">CTO, Galaxy Tech</p>
-                                    </div>
-                                    <div class="card-glow"></div>
-                                </div>
-                                <div class="card-back">
-                                    <p class="card-quote">"Creative, reliable, and out-of-this-world skills. A true asset to any
-                                        project."</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card" data-id="3" data-angle="240">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <div class="card-core">
-                                        <div class="card-nucleus"></div>
-                                        <div class="card-energy"></div>
-                                        <img src="images/client3.png" alt="Client 3" class="card-avatar" />
-                                        <h3 class="card-name">Emily Star</h3>
-                                        <p class="card-role">Founder, Nebula Innovations</p>
-                                    </div>
-                                    <div class="card-glow"></div>
-                                </div>
-                                <div class="card-back">
-                                    <p class="card-quote">"Delivered beyond expectations with a stellar blend of tech and
-                                        creativity."</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact">
-                <h2>Let's <span class="highlight">Connect</span></h2>
-                <p>Have a project idea? Let's discuss it!</p>
-                <form class="contact-form" aria-label="Contact Form">
-                    <input type="text" placeholder="Your Name" required aria-label="Name">
-                    <input type="email" placeholder="Your Email" required aria-label="Email">
-                    <textarea placeholder="Your Message" rows="5" required aria-label="Message"></textarea>
-                    <button type="submit" class="contact-button">Send Message</button>
-                </form>
-            </section>
-        </main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Let’s <span class="highlight">Connect</span></h2>
+            <p>Have a project idea? Let’s discuss it!</p>
+            <form class="contact-form" aria-label="Contact Form">
+                <input type="text" placeholder="Your Name" required aria-label="Name">
+                <input type="email" placeholder="Your Email" required aria-label="Email">
+                <textarea placeholder="Your Message" rows="5" required aria-label="Message"></textarea>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+        </section>
 
         <!-- Footer Section -->
         <footer>
             <div class="footer-content">
                 <p>© 2025 Burhan Ali. All Rights Reserved.</p>
                 <ul class="social-links" aria-label="Social Media Links">
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
         </footer>
     </div>
-
     <!-- JavaScript Libraries -->
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of element is visible
+            });
+
+            document.querySelectorAll('[data-animation]').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
     <script src="script.js"></script>
-    <script src="home.js"></script>
+    <script src="services.js"></script>
 </body>
+
 </html>

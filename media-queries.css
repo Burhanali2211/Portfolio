@@ -1,694 +1,283 @@
-/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    #home {
+        height: auto;
+        padding: 20px 0;
+    }
 
-/* Large Devices (Desktops & Laptops, 1025px to 1400px) */
-@media screen and (max-width: 1400px) {
-    /* About Section */
-    .about-title {
-        font-size: 4.5rem;
-    }
-    
-    .about-stats-container {
-        width: 45%;
-    }
-    
-    /* Services Section */
-    .services-title {
-        font-size: 5rem;
-    }
-    
-    /* Projects */
-    .project-card {
-        height: 360px;
-    }
-}
-
-/* Medium Devices (Tablets & Small Laptops, 769px to 1024px) */
-@media screen and (max-width: 1024px) {
-    /* Global */
-    section {
-        padding: 60px 20px;
-    }
-    
-    /* Hero Section */
     .hero-container {
-        padding: 100px 20px 60px;
+        padding: 0 20px;
     }
-    
+
     .hero-title {
-        font-size: 4rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.4rem;
-        margin: 20px 0 40px;
-    }
-    
-    .hero-profile {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .image-orbit {
-        width: 500px;
-        height: 500px;
-    }
-    
-    /* About Section */
-    .about-main {
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .about-text-container,
-    .about-stats-container {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .stats-wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    /* Services Section */
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-    
-    .service-pod {
-        height: 400px;
-    }
-    
-    /* Skills Section */
-    .skills-title {
-        font-size: 3rem;
-    }
-    
-    /* Projects Section */
-    .projects-title {
         font-size: 3.5rem;
     }
-    
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+
+    .hero-subtitle {
+        font-size: 1.3rem;
     }
-    
-    /* Testimonials Section */
-    .testimonial-orbit {
-        width: 550px;
-        height: 550px;
-    }
-    
-    .testimonial-card {
-        width: 240px;
-        height: 300px;
-    }
-    
-    /* Contact Section */
-    #contact h2 {
-        font-size: 2.2rem;
+
+    .primary-button,
+    .secondary-button {
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 }
 
-/* Small Devices (Mobile Phones in Landscape & Small Tablets, 481px to 768px) */
-@media screen and (max-width: 768px) {
-    /* Navigation */
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        background: rgba(15, 15, 30, 0.85) !important;
-        backdrop-filter: blur(10px);
-        z-index: 100;
-    }
-    
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        padding-top: 80px;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    .nav-item {
-        margin: 15px 0;
-        opacity: 0;
-        animation: fadeInNav 0.5s forwards;
-        animation-delay: calc(0.1s * var(--item-index, 0));
-    }
-    
-    @keyframes fadeInNav {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
+@media (max-width: 768px) {
+
+    .image-glow {
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            /* width: 160%; */
+            height: 160%;
+            /* background: radial-gradient(circle, rgba(89, 38, 239, 0.4) 0%, transparent 70%); */
+            opacity: 0.6;
+            animation: glowExpand 5s infinite ease-in-out;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+    
+        .image-hologram {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(89, 38, 239, 0.2) 0%, transparent 50%, rgba(89, 38, 239, 0.2) 100%);
+            opacity: 0.3;
+            transform: translateZ(50px);
+            animation: hologramFlicker 3s infinite ease-in-out;
         }
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .image-wrapper {
+            position: relative;
+            transform-style: preserve-3d;
+            animation: imageFloat 8s infinite ease-in-out alternate;
+        }
     
-    .nav-link {
-        font-size: 1.5rem !important;
-        padding: 12px 24px;
-        color: white;
-    }
+        @keyframes imageFloat {
+            0% {
+                transform: translateY(0) rotateY(0deg);
+            }
     
-    /* Hero Section */
+            50% {
+                transform: translateY(-15px) rotateY(10deg);
+            }
+    
+            100% {
+                transform: translateY(0) rotateY(0deg);
+            }
+        }
+
+    .title-line.highlight {
+            color: #5926EF;
+            position: relative;
+            text-shadow: 0 0 15px rgba(89, 38, 239, 0.7);
+        }
+    #home {
+            height: 100vh;
+            padding: 20px 0;
+        }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-profile {
+        width: 400px;
+        height: 445px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        padding: 10px 20px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 50px;
-        padding-top: 80px; /* Add space for fixed navbar */
     }
-    
+
     .hero-text {
         max-width: 100%;
+        /* margin-top: 5px; */
+        margin-bottom: 50px;
     }
-    
+
     .hero-title {
-        font-size: 3.2rem;
-        transform: none !important;
+        font-size: 3.5rem;
     }
-    
+
     .hero-subtitle {
-        justify-content: center;
-        flex-wrap: wrap;
+        font-size: 1.4rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
+        gap: 15px;
     }
-    
-    .primary-button, 
-    .secondary-button {
-        width: 100%;
-        justify-content: center;
+
+    .hero-image-container {
+        /* width: 300px; */
+        height: 300px;
     }
-    
+
     .image-orbit {
         width: 400px;
         height: 400px;
     }
-    
-    /* About Section */
-    .about-title {
-        font-size: 3.5rem;
-        transform: none !important;
+
+    .orbit-particle {
+        animation-duration: 5s;
+        /* Faster on mobile */
     }
-    
-    .stats-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    /* Services Section */
-    .services-title {
-        font-size: 3.5rem;
-        transform: none !important;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-pod {
-        height: 350px;
-    }
-    
-    /* Skills Section */
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* Projects Section */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .project-card {
-        height: 340px;
-    }
-    
-    /* Testimonials Section */
-    .testimonials-title {
-        font-size: 3rem;
-    }
-    
-    .testimonial-orbit {
-        height: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        perspective: none;
-    }
-    
-    .testimonial-card {
-        position: relative;
-        width: 100%;
-        max-width: 280px;
-        height: 320px;
-        margin: 0 auto;
-        transform: none !important;
-        left: 0;
-        top: 0;
-    }
-    
-    .orbit-center {
+
+    .hero-floaters {
         display: none;
-    }
-    
-    /* Contact Section */
-    .contact-form {
-        width: 100%;
+        /* Hide floaters on small screens */
     }
 }
 
-/* Extra Small Devices (Mobile Phones in Portrait, up to 480px) */
-@media screen and (max-width: 480px) {
-    /* Global */
-    section {
-        padding: 50px 15px 70px;
-        margin-bottom: 20px;
-    }
-    
-    /* Make scrolling smoother on mobile */
-    html, body {
-        scroll-behavior: smooth;
-    }
-    
-    /* Navigation */
-    .navbar {
-        padding: 10px 15px !important;
-    }
-    
-    .nav-logo {
-        font-size: 1.4rem;
-    }
-    
-    /* Hero Section */
-    #home {
-        min-height: 100vh;
-        height: auto;
-    }
-    
-    .hero-container {
-        padding: 70px 15px 40px;
-    }
-    
+
+
+@media (max-width: 480px) {
     .hero-title {
-        font-size: 2.5rem;
-        margin-bottom: 12px;
+        font-size: 2rem;
     }
-    
+
     .hero-subtitle {
-        font-size: 1rem;
-        margin: 15px 0 30px;
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .subtitle-text {
-        display: block;
-    }
-    
-    .subtitle-text:nth-child(2) {
-        display: none; /* Hide the separator on mobile */
-    }
-    
-    .hero-image-container {
-        width: 240px;
-        height: 240px;
-        margin: 0 auto;
-    }
-    
-    .hero-profile {
-        border-radius: 20px;
-        transform: none !important;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 
-                   0 0 30px rgba(89, 38, 239, 0.4);
-    }
-    
-    .image-orbit,
-    .hero-floaters,
-    .page-floaters {
-        display: none; /* Hide complex animations on mobile */
-    }
-    
-    /* Better background on mobile */
-    .page-background {
-        opacity: 0.7;
-    }
-    
-    /* About Section */
-    .about-title {
-        font-size: 2.8rem;
-    }
-    
-    .about-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .stats-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Services Section */
-    .services-title {
-        font-size: 2.8rem;
-    }
-    
-    .services-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .service-pod {
-        height: 300px;
-    }
-    
-    .pod-title {
-        font-size: 1.8rem;
-    }
-    
-    /* Skills Section */
-    .skills-title {
-        font-size: 2.5rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .filter-btn {
-        padding: 8px 16px;
         font-size: 0.9rem;
     }
-    
-    /* Projects Section */
-    .projects-title {
-        font-size: 2.5rem;
-    }
-    
-    .projects-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .project-name {
-        font-size: 1.5rem;
-    }
-    
-    /* Testimonials Section */
-    .testimonials-title {
-        font-size: 2.5rem;
-    }
-    
-    .testimonial-card {
-        height: 280px;
-    }
-    
-    .card-avatar {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .card-name {
-        font-size: 1.5rem;
-    }
-    
-    /* Services Section Improvements */
-    .service-pod {
-        height: auto;
-        padding-bottom: 50px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        margin-bottom: 30px;
-    }
-    
-    .pod-core {
-        padding: 30px 15px;
-    }
-    .pod-icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-    .pod-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-    
-    .pod-desc {
-        display: block !important;
-        opacity: 1 !important;
-        position: relative;
-        padding: 0 20px;
-        margin-top: 20px;
-        transform: none !important;
-    }
-    
-    .pod-overlay {
-        opacity: 1;
-        position: static;
-        background: none;
-        backdrop-filter: none;
-    }
-    
-    /* Projects Improvements */
-    .project-card {
-        height: auto;
-        padding-bottom: 20px;
-    }
-    
-    .project-inner {
-        transform-style: flat !important;
-    }
-    
-    .project-card.flipped .project-front {
-        display: none;
-    }
-    
-    .project-card.flipped .project-back {
-        transform: none;
-        position: static;
-    }
-    
-    .project-front, 
-    .project-back {
-        position: static;
-        height: auto;
-        min-height: 320px;
-    }
-    
-    .project-image {
-        height: 180px;
-        object-fit: cover;
-    }
-    
-    /* Testimonials Improvement */
-    .testimonial-card {
-        height: auto;
-    }
-    
-    .mobile-card {
-        width: 85% !important;
-        margin: 0 auto 30px !important;
-    }
-    
-    .testimonial-orbit {
-        perspective: none !important;
-    }
-    
-    .card-inner, 
-    .card-front, 
-    .card-back {
-        position: static;
-        transform-style: flat !important;
-    }
-    
-    .card-back {
-        display: none;
-    }
-    
-    .testimonial-card.flipped .card-front {
-        display: none;
-    }
-    
-    .testimonial-card.flipped .card-back {
-        display: block;
-        transform: none;
-    }
-    
-    /* Contact Section */
-    #contact {
-        padding-top: 70px;
-        padding-bottom: 80px;
-        background: rgba(15, 15, 30, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 20px 20px 0 0;
-        margin-top: -20px;
-    }
-    
-    #contact h2 {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-    }
-    
-    .contact-form {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .contact-button {
-        width: 100%;
-        padding: 15px;
-        margin-top: 10px;
-        background: var(--primary-color);
-        color: white;
-        font-weight: bold;
-        border-radius: 30px;
-    }
-    
-    /* Footer */
-    footer {
-        padding: 20px 15px;
-        background: rgba(10, 10, 20, 0.9);
-    }
-    
-    .footer-content {
+
+
+
+    .hero-content {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .social-links a {
-        font-size: 1.5rem;
-        padding: 10px;
-    }
-}
 
-/* Fix for any display issues with the hamburger menu */
-@media screen and (min-width: 769px) {
-    .nav-menu {
-        display: flex !important;
-    }
-}
-
-/* Special fix for testimonial cards on medium-sized screens */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .testimonial-card {
-        transform: none !important;
-    }
-}
-
-/* Animation optimizations for mobile devices */
-@media screen and (max-width: 768px) {
-    /* Fix for scroll back issue - ensure smooth scroll behavior */
-    html {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    /* Fix for body overflow */
-    body {
-        overflow-x: hidden;
+    .primary-button,
+    .secondary-button {
         width: 100%;
+        margin: 10px 0;
     }
-    
-    /* Improve locomotive scroll on mobile */
-    .scroll-wrapper {
-        overflow-x: hidden;
-    }
-    
-    [data-scroll-section] {
-        will-change: transform;
-    }
-    
-    /* Reduce or remove complex animations on mobile for better performance */
-    @keyframes floatComplex {
-        0%, 100% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, -10px);
-        }
-    }
-    
-    @keyframes orbitText {
-        0%, 100% {
-            transform: none;
-        }
-    }
-    
-    @keyframes orbit {
-        0%, 100% {
-            transform: none;
-        }
-    }
-    
-    /* Simplify background effects */
-    .page-particles, 
-    .page-grid, 
-    .services-circuit-pattern {
-        opacity: 0.3;
-    }
-    
-    /* Add a better visual for card flipping on mobile */
-    .skill-card, .project-card, .testimonial-card {
-        position: relative;
-    }
-    
-    .flipped .skill-inner,
-    .flipped .project-inner,
-    .flipped .card-inner {
-        box-shadow: 0 15px 30px rgba(89, 38, 239, 0.4);
-    }
-    
-    /* Add tap instruction hint */
-    .skill-card::after,
-    .project-card::after,
-    .testimonial-card::after {
-        content: "Tap to flip";
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.7);
-        background: rgba(89, 38, 239, 0.5);
-        padding: 3px 8px;
-        border-radius: 10px;
-        opacity: 0.7;
+
+    .dynamic-particle {
+        display: none;
+        /* Reduce particle clutter on small screens */
     }
 }
 
-/* Fix for various scroll issues */
-@media screen and (max-width: 1024px) {
-    /* Ensure proper touch scrolling */
-    .scroll-wrapper {
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 20px;
     }
-    
-    /* Optimize for mobile scrolling */
-    .c-scrollbar, .c-scrollbar_thumb {
-        width: 5px;
-        opacity: 0.5;
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .nav-indicator {
+        height: 3px;
     }
 }
+
+@media (max-width: 768px) {
+
+    .title-line.highlight {
+    color: #5926EF;
+    position: relative;
+    text-shadow: 0 0 1px rgba(88, 38, 239, 0);
+}
+
+.title-line.highlight::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(89, 38, 239, 0.3);
+    transform: translateZ(-50px);
+    z-index: -1;
+}
+
+
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+    display: flex;
+        background: rgba(36, 26, 39, 0.897);
+        /* Light transparent background */
+        backdrop-filter: rgb(251, 252, 253);
+        
+        /* Apply a more natural blur */
+        -webkit-backdrop-filter: var(--glass-bg);
+        /* Safari support */
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    
+
+    .nav-indicator {
+        display: none;
+        /* Hide indicator on mobile */
+    }
+
+    .nav-actions {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .theme-toggle {
+        font-size: 1.2rem;
+    }
+}
+}
+
+/* ----------------------------------LAST SECTION --------------------------------------------------------- */
+
